@@ -1,0 +1,514 @@
+html,
+body,
+.header,
+.header * {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  overflow: hidden;*/
+}
+
+body {
+  background-color: #FFFFFF;
+  background-image: none;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 13px;
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  overflow: hidden;*/
+  -webkit-text-size-adjust: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#splashScreen {
+  background:#25756f url(loading_foreground.png) no-repeat 50% 50%;
+  bottom:0px;
+  height:100%;
+  left:0px;
+  position:absolute;
+  right:0px;
+  top:0px;
+  width:100%;
+}
+
+.load {
+	 background: #4b8984;
+}
+
+#splash-logo {
+	background: url(sprites.png) no-repeat 0 -240px;
+	width: 284px;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 76px;
+	margin-bottom: 62px;
+}
+
+#splash-loader {
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	background: url(loader/splash.gif) no-repeat;
+}
+
+#wrapper, #new-wrapper {
+/*    position:absolute;*/
+/*    width:100%;*/
+/*  bottom:0px;
+    left: 0px;
+    position: absolute;
+    right:0px;
+    top: 0px;
+*/
+}
+
+
+#modal, .modal {
+	background: url(bg_black.png);
+	bottom:0px;
+	left: 0px;
+	position: absolute;
+	right:0px;
+	top: 0px;
+	z-index: 99;
+}
+
+.message {
+	background: #fff;
+	left: 0px;
+	padding: 16px;
+	position: absolute;
+	right:0px;
+}
+
+.header, #search-header  {
+	background: #4b8984;
+	border-bottom: #376965 solid 1px;
+	height: 47px;
+	width: 100%;
+	color: #fff;
+/*  position: absolute;*/
+/*  top: 0;*/
+	z-index: 5;
+	overflow: hidden;
+}
+
+#header-logo {
+	width: 100px;
+	height: 40px;
+	background: url(sprites.png) no-repeat 0 -198px;
+}
+
+#search-header {
+	background: #f1763b;
+	border-bottom: #c45723 solid 1px;
+}
+
+#search-header .bt.search {
+    background: url(sprites.png) no-repeat -285px -178px;
+    margin-top:7px;
+    width:63px;
+}
+
+.double .header {
+	background: #4b8984;
+	border-bottom: #376965 solid 1px;
+	height: 81px;
+}
+
+.list {
+/*  bottom:0px;
+    left: 0px;
+    overflow: auto;
+    right:0px;
+    top: 46px;*/
+	z-index: 1;
+}
+
+.default .list {
+/*  position: absolute;*/
+}
+
+.iphone-scroll .list {
+	margin-top: 46px;
+	position: static;
+}
+
+.double .list {
+	top: 82px;
+}
+
+.bread {
+	display: none;
+	float: left;
+	margin: 6px;
+	height: 26px;
+	left: 0px;
+	position: absolute;
+	right:140px;
+}
+
+.double .bread {
+	display: block;
+}
+
+.bread a {
+	float: left;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	max-width: 60%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	height: 15px;
+	padding: 10px 8px 9px 8px;
+	background: #376965;
+	-webkit-border-radius: 10px;
+}
+
+.bread a:first-child {
+	background: #376965;
+	padding-left: 8px;
+	padding-right: 8px;
+	max-width: 100%;
+}
+
+.bread .spacer{
+	float: left;
+	width: 4px;
+	height: 10px;
+}
+
+.bread a:first-child.last {
+}
+
+.bread .end {
+}
+
+.nav {
+	margin-top: 46px;
+	padding: 0 8px;
+	border-top: #376965 solid 1px;
+}
+
+.nav #title {
+	position: absolute;
+	font-size: 13px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+	left: 20px; /* 40px if you want to next/prev arrows */
+	padding-top: 11px;
+	right:20px; /* 40px if you want the next/prev arrows */
+}
+
+.list .item {
+	color:#000000;
+  background-color: #FFFFFF;
+	display:block;
+	padding: 14px;
+	padding-right: 42px;
+	border-bottom: #999 1px solid;
+	text-decoration:none;
+}
+
+.list a.item {
+  background: #FFF url(icon_arrow.png) right center no-repeat;
+}
+
+/*
+ * This messes up on the BlackBerry proprietary browsers.
+ * So, restrict this to a WebKit feature. I know... bad practice.
+ */
+@media all and (-webkit-device-pixel-ratio) {
+  .list .item.selected {
+    background: #fff url(loader/default.gif) 98% center no-repeat;
+  }
+}
+
+.list .item.loading {
+  background-image: none;
+}
+
+.list .item.loading img {
+  float: left;
+}
+
+.list .item.loading div {
+  line-height: 24px;
+  padding-left: 36px;
+}
+
+.list .item span.snip {
+	display: block;
+	font-size: 10px;
+	color: #777;
+}
+
+.list .item.back, .list .item.selected.back {
+	text-align: center;
+	background: url(tile.png) repeat-x 0 -393px;
+	color: #fff;
+	padding: 14px;
+	font-size: 13px;
+}
+
+
+.list .label {
+	background: #666;
+	line-height: 14px;
+	color: #fff;
+	font-size: 12px;	
+	padding: 2px 16px 3px 16px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/*.detail li {
+  padding-left: 0;
+  margin: 8px 0;
+  margin-left: 16px;
+}*/
+
+.detail {
+	padding: 24px 16px;
+	font-size: 1.05em;
+	line-height: 1.5;
+}
+
+.detail a {
+	color: rgb(253, 90, 30);
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.left-edge {
+	padding-left: 4px;
+}
+
+.right-edge {
+	padding-right: 4px;
+}
+
+
+.bt {
+	display: block;
+	height: 36px;	
+	width: 44px;
+	margin: 5px 0 0px;
+}
+
+.bt a:hover {
+	background: #ff0000;
+}
+
+.bt.round {
+	width: 36px;
+}
+
+.bt.search {background: url(sprites.png) no-repeat -182px -26px;}
+.bt.font {background: url(sprites.png) no-repeat -138px -26px;}
+.bt.close {background: url(sprites.png) no-repeat -102px -26px;}
+.bt.update {background: url(sprites.png) no-repeat -226px -26px;}
+
+.search-container {
+    display:block;
+    padding:8px 75px 0px 48px; /* left-button 48px, right-button 75px */
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding:4px 0px;
+    position:static;
+    width:100%;
+	-webkit-border-radius: 5px;
+}
+
+input[type="text"].selected,
+input[type="input"].selected {
+	background: #fff url(loader/white.gif) right center no-repeat;
+}
+
+#result {
+	top: 46px;
+	background: none;
+}
+
+.bt-container {
+	background: url(sprites.png) no-repeat -52px 0px;
+	height: 26px;
+	width: 26px;
+	float: left;
+	margin-top: 5px;
+}
+.bt-container.right {
+	float: right;
+}
+
+.bt.arrow {
+	margin-top: 0;
+	background: url(sprites.png) no-repeat 0px 0px;
+	height: 26px;
+	width: 26px;
+}
+
+.bt.arrow.right {
+	background: url(sprites.png) no-repeat -26px 0px;
+}
+
+.bt.arrow.selected {
+	background: url(loader/small.gif) no-repeat center center;
+}
+
+.float-modal {
+	background: url(sprites.png) no-repeat 0px -62px;
+	width: 224px;
+	height: 72px;
+	margin: 0 auto;
+	margin-top: 75px;
+	padding: 12px;
+	font-size: 14px;
+	text-align: center;
+	color: #444;
+}
+
+.float-modal p {
+	height: 32px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.float-modal.tall {
+	background: #ddd;
+	height: auto;
+	width: 240px;
+	-webkit-border-radius: 5px;
+}
+
+.float-modal.tall p {
+	margin-bottom: 11px;
+	font-weight: normal;
+	height: auto;
+	text-align: left;
+}
+
+.float-modal.loading {
+  padding-top: 18px;
+}
+
+.float-modal.loading p {
+  font-size: 13px;
+  font-weight: bold;
+  overflow: hidden;
+  padding-top: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#progress-modal .float-modal.large {
+	background: url(sprites.png) no-repeat -284px -7px;
+	height:134px;
+	padding:16px 22px;
+	width:217px;
+}
+
+.bt-modal {
+	text-decoration: none;
+	background: url(sprites.png) no-repeat 0 -26px;
+	width: 102px;
+	height: 26px;
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 8px;
+	margin: 0 auto;
+}
+
+#progress-modal .float-modal {
+	padding-left: 16px;
+	padding-right: 16px;
+	width: 216px;
+}
+
+#progress-modal .bt-modal {
+	float: left;
+	background: none;
+	color: #666;
+	text-decoration: underline;
+	padding-top: 8px;
+	width: auto;
+    display:none;
+	/*width: 80px;
+	height: 18px;
+	padding-top: 2px;
+	background: url(sprites.png) no-repeat -8px -36px;*/
+}
+#progress-modal p {
+/*  height: 24px;*/
+/*  margin-top: 0px;*/
+    color:#444444;
+    font-weight: bold;
+	text-align: left;
+	margin-top:12px;
+}
+
+.progress-bar-container {
+	background: #aaa;
+	width: 82%;
+	height: 10px;
+	border: 1px solid #666;
+	float: left;
+}
+
+#progress-modal #bt-pause,
+#progress-modal #bt-resume {
+	display:none;
+	float: right;
+}
+
+.progress-description {
+    color:#444;
+    font-size:12px;
+    line-height:16px;
+    margin:16px 12px 0px;
+}
+
+#progress-close,
+#bt-retry-close {
+    display:block;
+    float:left;
+    margin:-28px 0px 0px 213px; /* -32px, 217px - inset by 4px */
+}
+#bt-retry-close {
+    margin:-24px 0px 0px 209px;
+}
+
+.progress-status {
+	font-size: 12px;
+}
+
+.progress-bar {
+	height: 100%;
+	width: 0%;
+	background: #eb7741;
+}
+
+.emphasis {
+    font-weight:bold;
+}

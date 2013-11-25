@@ -1,0 +1,14 @@
+<loader version="1.0">
+   <application id="${package.path}">
+      <name>PhoneGap BlackBerry Library</name>
+      <description/>
+      <version/>
+      <vendor/>
+      <copyright/>
+      <fileset Java="1.0">
+         <files>
+PhoneGapBlackBerryLib.cod
+</files>
+      </fileset>
+   </application>
+</loader>

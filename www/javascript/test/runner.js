@@ -1,0 +1,1 @@
+document.write(x$('#qunit-template')[0].innerHTML);

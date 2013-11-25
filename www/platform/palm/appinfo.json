@@ -1,0 +1,9 @@
+{
+	"id": "com.rnao.pda",
+	"version": "1.0.0",
+	"vendor": "Nitobi",
+	"type": "web",
+	"main": "index.html",
+	"title": "RNAO",
+	"icon": "icon.png"
+}

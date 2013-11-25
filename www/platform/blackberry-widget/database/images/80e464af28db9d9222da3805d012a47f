@@ -1,0 +1,140 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <title>Page not found | Nursing Best Practice Guidelines</title>
+  
+ <!--<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">  -->
+  <meta http-equiv="HandheldFriendly" content="true" />
+  <!-- <meta name="viewport" content="width=320" /> --> 
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/pda.rnao.ca/themes/PDA/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/theme/content-module.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/fckeditor/fckeditor.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/admin/toolbar/admin_toolbar.css?6" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/pda.rnao.ca/themes/PDA/style.css?6" />
+  <script type="text/javascript" src="/misc/jquery.js?6"></script>
+<script type="text/javascript" src="/misc/drupal.js?6"></script>
+<script type="text/javascript" src="/sites/all/modules/admin/toolbar/admin_toolbar.js?6"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+  
+  <script type="text/javascript"> </script>
+</head>
+
+<body class="not-front not-logged-in page-images no-sidebars">
+
+<div id="page-wrapper"><!-- PAGE CONTAINER **************  -->
+
+
+	<!-- secondary links - conditional -->
+         
+	<div id="header-wrapper"><!-- Header **************  -->
+    	
+       
+        <div id="logo"><!-- LOGO **************  -->
+                     <a href="/" title="Home" rel="home"><img src="/sites/pda.rnao.ca/themes/PDA/logo.png" alt="Home" id="logo-image" /></a>
+                  </div>
+        
+        <!-- slogan -->
+                       	<div id="site-slogan"><h1>Registered Nurses' Association of Ontario</h1></div>
+                 
+         <!-- site name -->
+          
+         	 <div id="sitename">
+                <h1>Nursing Best Practice Guidelines</h1>
+    		  </div>     
+                
+         <!-- search box -->
+                   
+          
+          
+          <!-- mission -->
+                  
+        <!-- header region -->
+               
+         
+        
+        
+        	
+        
+        <!--</div>-->
+    
+    
+    </div><!-- Header End**************  -->
+	
+     <!-- primary links -->
+          
+
+	<div id="main-wrapper"><!-- MAIN CONTAINER END **************  -->
+    
+    	
+        <div id="content">
+        
+                 
+        <!-- tabs -->
+          
+        
+        
+        <!-- title -->
+          
+       	<div id="content-title">
+        	Page not found        </div>
+     	 
+        
+               
+       	        
+        The requested page could not be found. 
+        
+        </div>
+        
+            	
+    
+    </div><!-- MAIN CONTAINER END **************  -->
+    
+    <div id="footer-region">
+    
+    	<div id="block-search-0" class="block block-search">
+
+  <div class="content">
+    <form action="/images/arrow_down.gif"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline">
+  <div class="form-item" id="edit-search-block-form-1-wrapper">
+ <label for="edit-search-block-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-0e090ae59bb5079e89f9cd6682afc7d2" value="form-0e090ae59bb5079e89f9cd6682afc7d2"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+
+</div></form>
+  </div>
+</div>
+            
+            
+            <!-- footer text -->
+            <div id="footer-text">
+                            </div>
+    
+    </div>
+
+</div><!-- END PAGE CONTAINER **************  -->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+RIM-COD-Module-Name: PhoneGapBlackBerryLib
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_os,net_rim_bb_browser_field_api,net_rim_bbapi_browser
+MIDlet-Jar-Size: 64113
+RIM-COD-Creation-Time: 1290101760
+MIDlet-Jar-URL: PhoneGapBlackBerryLib.jar
+RIM-COD-URL: PhoneGapBlackBerryLib.cod
+RIM-Library-Flags: 2
+RIM-COD-SHA1: 13 8e 27 c8 a8 13 64 f5 a1 03 43 99 29 8a f2 1b e0 ed f2 21
+RIM-COD-Size: 36200
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.1.1
+MIDlet-Name: PhoneGapBlackBerryLib
+MIDlet-Vendor: <unknown>
+MicroEdition-Profile: MIDP-2.0

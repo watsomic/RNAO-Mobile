@@ -1,0 +1,9 @@
+//
+//  PhoneGap.xcconfig
+//  RNAO
+//
+
+// Override this to use your project specific PHONEGAPLIB. 
+// You can base it off the current project path, $(PROJECT_DIR)
+PHONEGAPLIB  = $(PROJECT_DIR)/PhoneGapLib
+PRODUCT_NAME = RNAO Nursing Best Practice Guidelines

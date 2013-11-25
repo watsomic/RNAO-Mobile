@@ -1,0 +1,52 @@
+---
+blackberry: true
+
+destination: platforms/blackberry/www
+
+html:
+    - filename: index.html
+
+css:
+    - filename: style/mobile.css
+    - filename: style/blackberry.css
+
+javascript:
+    - filename: javascript/lib/xui.bb.js
+    - filename: javascript/lib/phonegap.blackberry.js
+    - filename: javascript/lib/json2.js
+    - filename: javascript/lib/mustache.js
+    - filename: javascript/lib/Lawnchair.js
+    - filename: javascript/lib/adaptors/LawnchairAdaptorHelpers.js
+    - filename: javascript/lib/adaptors/BlackBerryPersistentStorageAdaptor.js
+    - filename: javascript/plugins/SplashScreen.js
+    - filename: javascript/plugins/Update.js
+    - filename: javascript/plugins/URLCache.js
+    - filename: javascript/plugins/URLCacheManager.js
+    - filename: javascript/plugins/Store.js
+    - filename: javascript/application.js
+    - filename: javascript/app.js
+    - filename: javascript/app.const.js
+    - filename: javascript/app.please.js
+    - filename: javascript/app.database.js
+    - filename: javascript/app.cache.js
+    - filename: javascript/app.xhr.js
+    - filename: javascript/app.search.js
+    - filename: javascript/app.update.js
+   
+binary:
+    - filename: style/bg_black.png
+    - filename: style/bg_header.png
+    - filename: style/icon_arrow.png
+    - filename: style/loader/default.gif
+    - filename: style/loader/small.gif
+    - filename: style/loader/white.gif
+    - filename: style/loader/grey.gif
+    - filename: style/sprites.png
+    - filename: database/
+data:
+    - filename: data/
+
+icon: www/platform/blackberry/icon.png
+
+loading_screen: www/platform/blackberry/Default.png
+---

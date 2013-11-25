@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- External Dependencies -->
+  <script src="tests/lib/qunit.js"></script>
+  <link href="tests/style/qunit.css" rel="stylesheet" type="text/css" />
+  <link href="style/minified.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="qUnit">
+        <h1 id="qunit-header">QUnit example</h1>
+        <h2 id="qunit-banner"></h2>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+    </div>
+    
+    <script type="text/html" id="greeting_template">
+        <div id="greeting">
+            <p class="name">{{name}}</p>
+        </div>
+    </script>
+    
+    <!-- App -->
+    <script type="text/javascript" src="js/minified.js"></script>
+    <script src="tests/application.test.js"></script>
+</body>
+</html>

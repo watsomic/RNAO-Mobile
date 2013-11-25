@@ -1,0 +1,181 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta name="HandheldFriendly" content="true" />
+        <title>Nursing Best Practice Guidelines</title> 
+        
+        <link href="style/minified.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- SPLASH SCREEN TEMPLATE (VIEW)-->
+        <script type="text/mustache" id="splashScreen-template" class="view">
+          <div id="splashScreen"></div>
+        </script>
+        
+        <!-- HOME TEMPLATE (VIEW)-->
+        <script type="text/mustache" id="home-template" class="view">
+            <div id="header" class="header">
+                <div class="right right-edge">
+                    <a class="bt left update" href="#update" id="bt-update"></a>
+                    <a class="bt left font" href="#fontScale" id="bt-font"></a>
+                    <a class="bt left search" href="#search" id="bt-search"></a>
+                </div>
+                <div id="header-logo"></div>
+            </div>
+            <div id="list" class="list">
+                {{#items}}
+                {{#has_label}}
+                <div class="label">{{label_title}}</div>
+                {{/has_label}}
+                <a href="#list" tid="{{tid}}" header="{{header}}" class="item">{{header}}</a>
+                {{/items}}
+            </div>
+        </script>
+        
+        <!-- LIST TEMPLATE (VIEW) -->
+        <script type="text/mustache" id="list-template" class="view">
+            <div id="header" class="header">
+                <div id="bread" class="bread">
+                    <a href="#home" class="last" id="bt-home">Home</a>
+                    <div class="end"></div>
+                </div>
+                <div class="right right-edge">
+                    <a class="bt left update" href="#update" id="bt-update"></a>
+                    <a class="bt left font" href="#fontScale" id="bt-font"></a>
+                    <a class="bt left search" href="#search" id="bt-search"></a>
+                </div>
+                <div id="nav" class="nav">
+                    <div class="edge">
+                        <div id="title" class="ellipsis">{{current_title}}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="list" class="list">
+                {{#items}}
+                {{#has_label}}
+                <div class="label ellipsis">{{label_title}}</div>
+                {{/has_label}}
+                <a href="#page" nid="{{nid}}" header="{{header}}" class="item">{{header}}</a>
+                {{/items}}
+            </div>
+        </script>
+
+        <!-- PAGE TEMPLATE (VIEW) -->
+        <script type="text/mustache" id="page-template" class="view">
+            <div id="header" class="header">
+                <div id="bread" class="bread">
+                {{#current_title}}
+                    <a href="#home" class="last" id="bt-home">Home</a>
+                    {{#tax}}
+                    <div class="spacer"></div>
+                    <a href="#list" tid="{{id}}" header="{{full_name}}" id="blist" class="ellipsis">{{short_name}}</a>
+                    {{/tax}}
+                    <div class="end"></div>
+                {{/current_title}}
+                </div>
+                <div class="right right-edge">
+                    <a class="bt left update" href="#update" id="bt-update"></a>
+                    <a class="bt left font" href="#fontScale" id="bt-font"></a>
+                    <a class="bt left search" href="#search" id="bt-search"></a>
+                </div>
+                {{#current_title}}
+                <div id="nav" class="nav">
+                    <div class="edge">
+                        <div id="title" class="ellipsis">{{current_title}}</div>
+                    </div>
+                </div>
+                {{/current_title}}
+                {{^current_title}}
+                <div id="nav" class="nav" style="display:none;"></div>
+                <div id="header-logo"></div>
+                {{/current_title}}
+            </div>
+
+            <div id="list" class="list">
+                <div class="detail-header"></div>
+                <div class="detail">{{{content}}}</div>
+            </div>
+        </script>
+        
+        <!-- SEARCH TEMPLATE (MODAL) -->
+        <script type="text/mustache" id="search-template" class="modal">
+            <div id="search-header" class="header">
+                <div class="left left-edge"><a class="bt right close round" href="#closeSearch" id="bt-close-search"></a></div>
+                <div class="right right-edge"><a class="bt left" href="#searchResults" id="bt-start-search"></a></div>
+    
+                <div class="search-container">
+                    <input id="search-input" type="text" value="" />
+                </div>
+            </div>
+            <div id="result" class="list"></div>
+        </script>
+
+        <!-- SERACH LOADER TEMPLATE (PARTIAL) -->
+        <script type="text/mustache" id="searchLoader-template" class="partial">
+          <div class="item loading">
+              <img src="style/loader/default.gif" />
+              <div>Searching for {{query}}...</div>
+          </div>
+        </script>
+
+        <!-- RESULTS TEMPLATE (PARTIAL) -->
+        <script type="text/mustache" id="searchResults-template" class="partial">
+            {{#results}}
+            <a href="#page" class="item" nid="{{nid}}" header="{{title}}">{{title}}</a>
+            {{/results}}
+            {{#error}}
+            <div class="message">{{message}}</a>
+            {{/error}}
+        </script>
+        
+        <!-- UPDATE TEMPLATE (MODAL) -->
+        <script type="text/mustache" id="update-template" class="modal">
+            <div id="progress-modal">
+                <div class="float-modal large">
+                    <a href="#update-close" id="progress-close" class="bt round close"></a>
+                    <p id="progress_message">Finding outdated items...</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="progress-status">0%</div>
+                    <div class="progress-description">Downloading new and updated articles for offline viewing.<br />This can take <span class="emphasis">5 - 10 minutes</span>.</div>
+                    <a id="bt-pause" href="#" class="bt-modal">Pause</a>
+                    <a id="bt-cancel" href="#" class="bt-modal">Cancel</a>
+                    <a id="bt-resume" href="#" class="bt-modal" style="display:none;">Resume</a>
+                </div>
+            </div>
+        </script>
+        
+        <!-- DIALOG TEMPLATE (MODAL) -->
+        <script type="text/mustache" id="network-error-template" class="modal">
+            <div class="float-modal">
+                <a href="#" id="bt-retry-close" class="bt round close"></a>
+                <p><b>Network is unavailable.</b></p>
+                <a id="bt-retry" href="#" class="bt-modal">Retry</a>
+            </div>
+        </script>
+
+        <!-- LOADING TEMPLATE (MODAL) -->
+        <script type="text/mustache" id="loading-template" class="modal">
+            <div class="float-modal loading">
+                <img src="style/loader/grey.gif" />
+                <p id="loading-title" class="ellipsis">{{title}}</p>
+            </div>
+        </script>
+        
+        <!-- qUnit -->
+        <script type="text/mustache" id="qunit-template">
+            <div class="qUnit" style="position:absolute;top:0px;left:0px;right:0px;z-index:100;">
+                <h1 id="qunit-header">QUnit example</h1>
+                <h2 id="qunit-banner"></h2>
+                <h2 id="qunit-userAgent"></h2>
+                <ol id="qunit-tests"></ol>
+            </div>
+        </script>
+        
+        <script type="text/javascript" src="js/minified.js"></script>
+    </body> 
+</html>
